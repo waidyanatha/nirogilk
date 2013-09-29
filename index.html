@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main House Hold and Personal data</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/customCss/customCss.css">
+    <!--javascript sources-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        .span12{
+            background: #ffffff;
+            margin-top: 1%;
+        }
+        .span10{
+            background: #ffffff;
+            margin-top: 1%;
+        }
+        .span5{
+           /* background: #ffc2a8;    */
+            margin-top: 2%;
+        }
+        .districtNo{
+            width: 10%;
+
+        }
+        #houseNo{
+            width: 25%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">  <!--main div container-->
+
+        <div class="row-fluid"> <!--menu bar-->
+            <div class="navbar navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container">
+                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-th-list"></span>
+                        </a>
+                        <div class="nav-collapse collapse">
+                            <ul class="nav pull-left">
+                                <li class="active"><a href="index.html">Home</a> </li>
+                                <li><a href="#">Vaccination</a> </li>
+                                <li><a href="#">Birth Info</a> </li>
+                                <li><a href="#">Occupation</a> </li>
+                                <li><a href="#">Life Style</a> </li>
+                                <li><a href="#">Diseases</a> </li>
+                                <li><a href="#">Person Diseases</a> </li>
+                                <li><a href="#">Pregnancy</a> </li>
+                                <li><a href="#">Prental</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!--end of menu bar-->
+
+
+            <div class="row-fluid"><!-- collapse panel holder container-->
+                <div class="span12">  <!--panel holder-->
+                    <div id="row1" class="span10 offset1">  <!--form container-->
+                        <div class="span5 offset1"> <!--house hold data form-->
+                            <div class="accordion" id="house" style="border-radius: 5px;background: #eeeeee; /* Old browsers */
+                                    background: -moz-linear-gradient(top,  #eeeeee 100%, #cccccc 100%); /* FF3.6+ */
+                                    background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+                                    background: -webkit-linear-gradient(top,  #eeeeee 100%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+                                    background: -o-linear-gradient(top,  #eeeeee 100%,#cccccc 100%); /* Opera 11.10+ */
+                                    background: -ms-linear-gradient(top,  #eeeeee 100%,#cccccc 100%); /* IE10+ */
+                                    background: linear-gradient(to bottom,  #eeeeee 100%,#cccccc 100%); /* W3C */
+                                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+"><!--collapse panel-->
+                                <div class="accordion-group">
+                                    <div class="accordion-heading">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#house" href="#first">
+                                            <i class="icon-home"></i>  &nbsp&nbspHouse Hold Data
+                                        </a>
+                                    </div>
+                                    <div id="first" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            <!--house hold data form goes here-->
+                                            <div id="form_container" class="container-fluid">
+                                                <form action="#" method="post">
+                                                    <fieldset>
+                                                        <legend>House Hold Data</legend>
+                                                        <label>1.Identification  </label>
+                                                        <input type="text" class="districtNo" placeholder="district"> <!--<input type="text" class="span1"> also can use this to short text field-->
+                                                        <input type="text" class="districtNo" placeholder="DSNo">
+                                                        <input type="text" class="districtNo" placeholder="GNDNo">
+                                                        <input type="text" id="houseNo" placeholder="houseNo">
+                                                        <span class="help-block"></span>
+
+                                                         <label>2.MOH No</label>
+                                                        <input type="text" class="span2">
+                                                        <span class="help-block"></span>
+
+                                                        <label>3.PHM No</label>
+                                                        <input type="text" class="span2">
+                                                        <span class="help-block"></span>
+
+                                                        <label>4.Sector:</label>
+                                                        <select class="combobox">
+                                                            <option value="1">Urban</option>
+                                                            <option value="2">Rural</option>
+                                                            <option value="3">Estate</option>
+                                                        </select>
+                                                        <span class="help-block"></span>
+
+                                                        <label>5.Postal Address</label>
+                                                        <input type="text" class="span10">
+
+                                                        <span class="help-block"></span>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
+                                                        <button type="button" class="btn btn-primary"> Edit</button>
+                                                    </fieldset>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!--end of collapse panel-->
+                        </div><!--end house form-->
+
+
+                        <div class="span5"><!--personal data form-->
+                            <div class="accordion" id="personalData"><!--collapse panel-->
+                                <div class="accordion-group" style="border-radius: 5px;background: #eeeeee; /* Old browsers */
+                                        background: -moz-linear-gradient(top,  #eeeeee 100%, #cccccc 100%); /* FF3.6+ */
+                                        background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#eeeeee), color-stop(100%,#cccccc)); /* Chrome,Safari4+ */
+                                        background: -webkit-linear-gradient(top,  #eeeeee 100%,#cccccc 100%); /* Chrome10+,Safari5.1+ */
+                                        background: -o-linear-gradient(top,  #eeeeee 100%,#cccccc 100%); /* Opera 11.10+ */
+                                        background: -ms-linear-gradient(top,  #eeeeee 100%,#cccccc 100%); /* IE10+ */
+                                        background: linear-gradient(to bottom,  #eeeeee 100%,#cccccc 100%); /* W3C */
+                                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+">
+                                    <div class="accordion-heading" >
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#personalData" href="#second">
+                                            <i class="icon-user"></i> &nbsp&nbsp Personal Data
+                                        </a>
+                                    </div>
+                                    <div id="second" class="accordion-body collapse">
+                                        <div class="accordion-inner">
+                                            <div class="container-fluid">
+                                                <form action="#" method="post">  <!--personal info form-->
+                                                    <fieldset>
+                                                       <legend>Personal Info</legend>
+                                                        <label>UNIQUE SERIAL NUMBER </label>
+                                                            <input type="text" class="span5">
+                                                        <label>Name</label>
+                                                            <input type="text" class="span12">
+                                                        <label>NIC No</label>
+                                                            <input type="text" class="span5">
+                                                        <label>DOB</label>
+                                                            <input type="text" class="span5">
+                                                        <label>Current Age</label>
+                                                            <input type="text" class="span5">
+                                                        <label>Sex</label>
+                                                            <select class="combobox">
+                                                                <option value="1">Male</option>
+                                                                <option value="2">FeMale</option>
+                                                            </select>
+                                                        <label>Relationship To Head</label>
+                                                            <input type="text" class="span5">
+                                                        <span class="help-block"></span>
+                                                        <button type="submit" class="btn btn-primary">Save</button>
+                                                        <button type="button" class="btn btn-primary">Edit</button>
+                                                    </fieldset><!--end of personal info form-->
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> <!--end of collapse panel-->
+                        </div><!--end of personal data form-->
+                    </div>  <!--end of form container-->
+                </div>  <!--end of panel holder-->
+            </div> <!--end of collapse panel holder container-->
+
+    </div> <!--end of main container-->
+
+
+</body>
+</html>
