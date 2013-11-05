@@ -1,0 +1,24 @@
+<%
+var db_query_persons_view = "SELECT * FROM  `persons` LIMIT 0 , 30"
+var db_query_persons_create = "CREATE TABLE  `persons` (`persons_id` INT NOT NULL AUTO_INCREMENT, `persons_name` VARCHAR( 120 ) NOT NULL, `persons_houseid` VARCHAR( 120 ) NOT NULL, `persons_subid` INT NOT NULL, `persons_age` INT NOT NULL, `persons_dob` VARCHAR( 120 ) NOT NULL, `persons_nic` VARCHAR( 120 ) NOT NULL, `persons_sex` VARCHAR( 120 ) NOT NULL, `persons_relationship_to_head` VARCHAR( 120 ) NOT NULL, `persons_occupation` VARCHAR( 120 ) NOT NULL, `persons_maritalstatus` VARCHAR( 120 ) NOT NULL, `persons_levelofeducation` VARCHAR( 120 ) NOT NULL, `persons_residence` VARCHAR( 120 ) NOT NULL, `persons_createby` VARCHAR( 120 ) NOT NULL, `persons_createproc` VARCHAR( 120 ) NOT NULL, `persons_modifyby` VARCHAR( 120 ) NOT NULL, `persons_modify` VARCHAR( 120 ) NOT NULL, `persons_active` BOOL NOT NULL DEFAULT  '1',`persons_create_time` TIMESTAMP NOT NULL ,`persons_modified_time` TIMESTAMP NOT NULL ,PRIMARY KEY (  `persons_id` ))";
+
+function db_query_persons_delet(persons_id) {
+var outStr = "DELETE FROM `persons` WHERE `persons_id` = " + persons_id + " LIMIT 1";
+return outStr;
+}
+
+function db_query_persons_get(persons_id) {
+var outStr = "SELECT *  FROM `persons` WHERE `persons_id` = " + persons_id + " LIMIT 1";
+return outStr;
+}
+
+function db_query_persons_add(persons_id,persons_name,persons_houseid,persons_subid,persons_age,persons_dob,persons_nic,persons_sex,persons_relationship_to_head,persons_occupation,persons_maritalstatus,persons_levelofeducation,persons_residence,persons_createby,persons_createproc,persons_modifyby,persons_modify,persons_active) {
+var outStr = "INSERT INTO  `persons` (`persons_id`, `persons_name`, `persons_houseid`, `persons_subid`, `persons_age`, `persons_dob`, `persons_nic`, `persons_sex`, `persons_relationship_to_head`, `persons_occupation`, `persons_maritalstatus`, `persons_levelofeducation`, `persons_residence`, `persons_createby`, `persons_createproc`, `persons_modifyby`, `persons_modify`, `persons_active`,`persons_create_time` ,`persons_modified_time`)VALUES ("+persons_id+",'"+persons_name+"','"+persons_houseid+"','"+persons_subid+"','"+persons_age+"','"+persons_dob+"','"+persons_nic+"','"+persons_sex+"','"+persons_relationship_to_head+"','"+persons_occupation+"','"+persons_maritalstatus+"','"+persons_levelofeducation+"','"+persons_residence+"','"+persons_createby+"','"+persons_createproc+"','"+persons_modifyby+"','"+persons_modify+"','"+persons_active+"',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);";
+return outStr;
+}
+
+function db_query_persons_update(persons_id,persons_name,persons_houseid,persons_subid,persons_age,persons_dob,persons_nic,persons_sex,persons_relationship_to_head,persons_occupation,persons_maritalstatus,persons_levelofeducation,persons_residence,persons_createby,persons_createproc,persons_modifyby,persons_modify,persons_active) {
+var outStr = "UPDATE  `persons` SET  `persons_name` =  '"+persons_name+"',`persons_houseid` =  '"+persons_houseid+"',`persons_subid` =  '"+persons_subid+"',`persons_age` =  '"+persons_age+"',`persons_dob` =  '"+persons_dob+"',`persons_nic` =  '"+persons_nic+"',`persons_sex` =  '"+persons_sex+"',`persons_relationship_to_head` =  '"+persons_relationship_to_head+"',`persons_occupation` =  '"+persons_occupation+"',`persons_maritalstatus` =  '"+persons_maritalstatus+"',`persons_levelofeducation` =  '"+persons_levelofeducation+"',`persons_residence` =  '"+persons_residence+"',`persons_createby` =  '"+persons_createby+"',`persons_createproc` =  '"+persons_createproc+"',`persons_modifyby` =  '"+persons_modifyby+"',`persons_modify` =  '"+persons_modify+"',`persons_active` =  '"+persons_active+"',`persons_modified_time` = CURRENT_TIMESTAMP WHERE  `persons_id` =" + persons_id + " LIMIT 1 ;";
+return outStr;
+}
+%>

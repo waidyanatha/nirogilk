@@ -1,0 +1,55 @@
+<%
+//This is a dynamic JavaScript file
+response.contentType = "application/javascript";
+var mainContext = request.getContextPath();
+%>
+
+Persons = new function () {
+	
+
+
+this.view = function (id) {
+console.log("calling invoce for Id "+id);
+$('#viewModalLabel').html('<h3>Viewing Persons Id '+id+' </h3>')
+$('#viewModal').modal('show');
+$.getJSON('../api/api/persons.jag?action=getpersons&personsId='+id, function(data) {
+var results = data.results[0];
+
+var out = '<table class="table table-hover"><tbody>'
++'<tr><td>CustomerId*</td><td id="cusNames">'+results.persons_customerId+'</td></tr>'
++'<tr><td>TotalAmount*</td><td>Rs. '+results.persons_totalAmount+'.00</td></tr>'
++'<tr><td>Payments Remaining</td><td><div id="paymentsRemaining">'+results.persons_totalAmount+'</div></td></tr>'
++'<tr><td>Days*</td><td>'+results.persons_days+'</td></tr>'
++'<tr><td>State*</td><td>'+results.persons_state+'</td></tr>'
++'<tr><td>Details*</td><td>'+results.persons_details+'</td></tr>'
++'<tr><td>Status*</td><td>'+results.persons_status+'</td></tr>'
++'<tr><td>Payment*</td><td>'+results.persons_payment+'</td></tr>'
++'<tr><td>DateComplete*</td><td>'+results.persons_dateComplete+'</td></tr>'
++'<tbody><table>';
+Persons.CallPaymentsRemaining(results.persons_totalAmount,id);
+$('#view-modal-body').html(out);
+});
+
+};
+
+
+this.reloadlist = function(){
+
+$.getJSON('../api/api/persons.jag?action=listpersons', function(data) {
+console.log(data.error);
+console.log(data.results);
+var template = "<table class=\"table table-striped\"><thead><tr><th>PersonsId</th><th>CustomerId</th><th>Status</th><th>Detials</th><th>Price</th><th></th></tr></thead><tbody>{{#results}}<tr><td>{{persons_id}} </td><td><a href=\"./customers/customer.jag?id={{persons_customerId}}\">{{persons_customerId}}</a>-<a href=\"./persons/persons.jag?id={{persons_id}}\">{{persons_id}}</a></td><td>{{persons_status}}</td><td>{{persons_details}}</td><td>{{persons_totalAmount}}</td>"
++"<td><div><button class=\"btn btn-info\" onclick=\"Persons.view('{{persons_id}}')\">View</button>&nbsp"
++"<button class=\"btn btn-primary\" onclick=\"Persons.edit('{{persons_id}}')\" >Edit</button>&nbsp"
++"<button class=\"btn btn-inverse\" onclick=\"Persons.update('{{persons_id}}')\" >Update</button>&nbsp"
++"<button class=\"btn btn-inverse\" onclick=\"Persons.remove('{{persons_id}}')\" >Remove</button></div></td>{{/results}}</tr></tbody></table>";
+var html = Mustache.to_html(template, data);
+$('#sampleArea').html(html);
+});
+};
+
+
+this.test = function (id) {
+console.log("calling test saved for Id "+id);
+};
+};

@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>MadhukaTestAPI-persons</title>
+</head>
+<body>
+<h1>PersonsAPI</h1>
+<a href="api/persons.jag?action=settabel">SetTablePersons</a><br>
+<a href="api/persons.jag?action=addpersons&personsName=testString&personsHouseid=testString&personsSubid=18&personsAge=18&personsDob=testString&personsNic=testString&personsSex=testString&personsRelationship_to_head=testString&personsOccupation=testString&personsMaritalstatus=testString&personsLevelofeducation=testString&personsResidence=testString&personsCreateby=testString&personsCreateproc=testString&personsModifyby=testString&personsModify=testString&personsActive=1&">AddPersons</a><br>
+<a href="api/persons.jag?action=listpersons">ListPersons</a><br>
+<a href="api/persons.jag?action=updatepersons&personsId=1&&personsName=testString&personsHouseid=testString&personsSubid=18&personsAge=18&personsDob=testString&personsNic=testString&personsSex=testString&personsRelationship_to_head=testString&personsOccupation=testString&personsMaritalstatus=testString&personsLevelofeducation=testString&personsResidence=testString&personsCreateby=testString&personsCreateproc=testString&personsModifyby=testString&personsModify=testString&personsActive=1&">UpdatePersons</a><br>
+<a href="api/persons.jag?action=getpersons&personsId=1&">GetPersons</a><br>
+<a href="api/persons.jag?action=deletpersons&personsId=1&">DeletPersons</a><br>
+<body>
+</html>

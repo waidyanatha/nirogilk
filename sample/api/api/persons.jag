@@ -1,0 +1,50 @@
+<%
+
+include("../model/dbinit.jag");
+include("../model/persons.jag");
+include("../controller/persons.jag");
+
+ var action = request.getParameter('action');
+ var personsId = request.getParameter('personsId');
+ var personsName = request.getParameter('personsName');
+ var personsHouseid = request.getParameter('personsHouseid');
+ var personsSubid = request.getParameter('personsSubid');
+ var personsAge = request.getParameter('personsAge');
+ var personsDob = request.getParameter('personsDob');
+ var personsNic = request.getParameter('personsNic');
+ var personsSex = request.getParameter('personsSex');
+ var personsRelationship_to_head = request.getParameter('personsRelationship_to_head');
+ var personsOccupation = request.getParameter('personsOccupation');
+ var personsMaritalstatus = request.getParameter('personsMaritalstatus');
+ var personsLevelofeducation = request.getParameter('personsLevelofeducation');
+ var personsResidence = request.getParameter('personsResidence');
+ var personsCreateby = request.getParameter('personsCreateby');
+ var personsCreateproc = request.getParameter('personsCreateproc');
+ var personsModifyby = request.getParameter('personsModifyby');
+ var personsModify = request.getParameter('personsModify');
+ var personsActive = request.getParameter('personsActive');
+
+switch(action) {
+case "listpersons":
+		print(listpersons());
+		break;
+	case "addpersons":
+		print(addpersons(personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive));
+		break;
+	case "updatepersons":
+		print(updatepersons(personsId,personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive));
+		break;
+	case "deletpersons":
+		print(deletpersons(personsId));
+		break;
+	case "getpersons":
+		print(getpersons(personsId));
+		break;
+	case "settabel":
+		print(settabel());
+		break;
+	default:
+		print(invokeError("persons action not define"));
+}
+
+%>
