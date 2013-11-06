@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nirogi Lanka</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+<div id="sampleArea"></div>
+
+    <script src="./js/jquery.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/mustache.js"></script>
+	<script>
+   
+    $(document).ready(function () {
+          $.getJSON('../api/api/persons.jag?action=listpersons', function(data) { 
+   console.log(data.error);
+   console.log(data.results);
+    var template = "<table class=\"table table-striped\"><thead><tr><th>PersonId</th><th>Name</th><th>Home</th><th>City</th><th>Age</th><th>NIC</th></tr></thead><tbody>{{#results}}<tr><td>{{persons_id}} </td><td><a href=\"./persons.jag?id={{persons_id}}\">{{persons_name}}</a></td><td>{{persons_residence}}</td><td>{{persons_residence}}</td><td>{{persons_age}}</td>"
+    +"<td>{{persons_nic}}</div></td>{{/results}}</tr></tbody></table>"; 
+    var html = Mustache.to_html(template, data); 
+    $('#sampleArea').html(html);
+  });
+    })
+</script>
+  </body>
+</html>

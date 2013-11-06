@@ -1,0 +1,91 @@
+<%
+
+function listpersons() {
+	var db_qury = db_query_persons_view;
+	log.info(db_qury);
+	var results = db.query(db_qury);
+	return {
+		"error" : false,
+		"results" : results
+	};
+}
+
+function settabel() {
+	var db_qury = db_query_persons_create;
+	log.info(db_qury);
+	var results = db.query(db_qury);
+	return {
+		"error" : false,
+		"results" : results
+	};
+}
+
+function addpersons(personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive) {
+	log.info("add persons");
+	if(personsName != null && personsHouseid != null && personsSubid != null && personsAge != null && personsDob != null && personsNic != null && personsSex != null && personsRelationship_to_head != null && personsOccupation != null && personsMaritalstatus != null && personsLevelofeducation != null && personsResidence != null && personsCreateby != null && personsCreateproc != null && personsModifyby != null && personsModify != null && personsActive != null ){
+	var db_qury = db_query_persons_add(null ,personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive);
+	log.info(db_qury);
+	var results = db.query(db_qury);
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("Please enter personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive");
+	}
+}
+
+function updatepersons(personsId,personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive) {
+	log.info("update persons");
+	if(personsId != null  && personsName != null && personsHouseid != null && personsSubid != null && personsAge != null && personsDob != null && personsNic != null && personsSex != null && personsRelationship_to_head != null && personsOccupation != null && personsMaritalstatus != null && personsLevelofeducation != null && personsResidence != null && personsCreateby != null && personsCreateproc != null && personsModifyby != null && personsModify != null && personsActive != null ){
+	var db_qury = db_query_persons_update(personsId ,personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive);
+	log.info(db_qury);
+	var results = db.query(db_qury);
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("Please enter personsId, personsName, personsHouseid, personsSubid, personsAge, personsDob, personsNic, personsSex, personsRelationship_to_head, personsOccupation, personsMaritalstatus, personsLevelofeducation, personsResidence, personsCreateby, personsCreateproc, personsModifyby, personsModify, personsActive");
+	}
+}
+
+function deletpersons(personsId) {
+	log.info("delet persons ");
+	if(personsId != null ){
+	var db_qury = db_query_persons_delet(personsId);
+	log.info(db_qury);
+	var results = db.query(db_qury);
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("Please enter personsId");
+	}
+}
+
+function getpersons(personsId) {
+	log.info("get persons ");
+	if(personsId != null ){
+	var db_qury = db_query_persons_get(personsId);
+	log.info(db_qury);
+	var results = db.query(db_qury);
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("Please enter personsId");
+	}
+}
+
+function invokeError(msg) {
+	log.info(msg);
+	return {
+		"error" : true,
+		"errorMsg" : msg
+	};
+}
+
+%>

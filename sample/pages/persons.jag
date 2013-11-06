@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Persons </title>
+    <script src="./js/persons.jag"></script>
+ <%  var personsId = request.getParameter('id');%>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+    
+     <div id="sampleArea"></div>
+         
+      </div> 
+      
+	<script src="./js/jquery.js"></script>
+    <script src="./js/util.js"></script>
+    <script src="./js/mustache.js"></script>
+ <script>
+var id = <%=personsId %>;
+$.getJSON('../api/api/persons.jag?action=getpersons&personsId='+id, function(data) {
+var results = data.results[0];
+console.log(results);
+var out = '<table class="table table-hover"><tbody>'
++'<tr><td>Person ID</td><td id="cusNames">'+results.persons_id+'</td></tr>'
++'<tr><td>Name</td><td>Rs. '+results.persons_name+'</td></tr>'
++'<tr><td>Education Level </td><td>Rs. '+results.persons_levelofeducation+'</td></tr>'
++'<tr><td>Residence</td><td>Rs. '+results.persons_residence+'</td></tr>'
++'<tr><td>NIC</td><td>Rs. '+results.persons_nic+'</td></tr>'
++'<tr><td>age</td><td>Rs. '+results.persons_age+'</td></tr>'
++'<tbody><table>';
+$('#sampleArea').html(out);
+});
+
+//$('option:selected', $("#invoiceProdName")).attr('price');
+</script>
+<script>
+   
+    $(document).ready(function () {
+       
+    })
+</script>
+  </body>
+</html>
