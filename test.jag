@@ -1,7 +1,0 @@
-<%
-    config = {}; 
-    var db = new Database("jdbc:mysql://localhost:3306/nirogilanka", "root", "root", config);
-    var query1  = "SELECT * FROM field_options;";
-    var results = db.query(query1);
-    print(results);                                    
-%>
