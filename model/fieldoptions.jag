@@ -1,0 +1,62 @@
+<%
+function db_query_fo_district_get() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'district' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_fo_district_get() RETURN : "+outStr);
+    return outStr;
+}
+// BREAST FEEDING 
+function db_query_sel_breastfeed() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'breastfeed' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_breastfeed() RETURN : "+outStr);
+    return outStr;
+}
+// NEONATA COMPLEXITY 
+function db_query_sel_neonatcomplex() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'neonatcomplex' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_neonatcomplex() RETURN : "+outStr);
+    return outStr;
+}
+// FAMILY PLANNING 
+function db_query_sel_famplan() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'famplan' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_famplan() RETURN : "+outStr);
+    return outStr;
+}
+// OCCUPATION SECTOR 
+function db_query_sel_occupsector() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'occupsector' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_occupsector() RETURN : "+outStr);
+    return outStr;
+}
+// OCCUPATION CATEGORY 
+function db_query_sel_occupcate() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'occupcate' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_occupcate() RETURN : "+outStr);
+    return outStr;
+}
+// OCCUPATION 
+function db_query_sel_occupation() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'occupation' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_occupation() RETURN : "+outStr);
+    return outStr;
+}
+// OCCUPATION ACCIDENT TYPE
+function db_query_sel_accidtype() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'accidtype' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_accidtype() RETURN : "+outStr);
+    return outStr;
+}
+// BODY PART
+function db_query_sel_bodypart() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'bodypart' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_bodypart() RETURN : "+outStr);
+    return outStr;
+}
+// DISABILITY
+function db_query_sel_disability() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'disability' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_disability() RETURN : "+outStr);
+    return outStr;
+}
+
+%>

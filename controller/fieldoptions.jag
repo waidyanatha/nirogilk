@@ -1,0 +1,190 @@
+<%
+function getfieldoptions(opt_cate){
+	log.info("CONTROLLER : fieldoptions ("+opt_cate+")");
+
+    switch(opt_cate) {
+        case "district":
+            log.info("CONTROLLER : fieldoptions EXEC : getdistrict()");
+            print(getdistrict());
+            break;
+        case "breastfeed":
+            log.info("CONTROLLER : fieldoptions EXEC : getbreastfeed()");
+            print(getbreastfeed());
+            break;
+        case "neonatcomplex":
+            log.info("CONTROLLER : fieldoptions EXEC : getneonatcomplex()");
+            print(getneonatcomplex());
+            break;
+        case "famplan":
+            log.info("CONTROLLER : fieldoptions EXEC : getfamplan()");
+            print(getfamplan());
+            break;
+        case "occupsector":
+            log.info("CONTROLLER : fieldoptions EXEC : getoccupsector()");
+            print(getoccupsector());
+            break;
+        case "occupcate":
+            log.info("CONTROLLER : fieldoptions EXEC : getoccupcate()");
+            print(getoccupcate());
+            break;
+        case "occupation":
+            log.info("CONTROLLER : fieldoptions EXEC : getoccupation()");
+            print(getoccupation());
+            break;
+        case "accidtype":
+            log.info("CONTROLLER : fieldoptions EXEC : getaccidtype()");
+            print(getaccidtype());
+            break;
+        case "bodypart":
+            log.info("CONTROLLER : fieldoptions EXEC : get_bodypart()");
+            print(get_bodypart());
+            break;
+        case "disability":
+            log.info("CONTROLLER : fieldoptions EXEC : get_disability()");
+            print(get_disability());
+            break;
+        default:
+            print(invokeError("CONTROLLER : fieldoptions RETURN : field_options action not define"));
+    }
+}
+
+function getdistrict() {
+	var db_qury = db_query_fo_district_get();
+	log.info("CONTROLLER : fieldoptions-->getdistrict() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getdistrict() RETURN : No field options");
+	}
+}
+
+function getbreastfeed() {
+	var db_qury = db_query_sel_breastfeed();
+	log.info("CONTROLLER : fieldoptions-->getbreastfeed() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getbreastfeed() RETURN : No field options");
+	}
+}
+function getneonatcomplex() {
+	var db_qury = db_query_sel_neonatcomplex();
+	log.info("CONTROLLER : fieldoptions-->getneonatcomplex() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getneonatcomplex() RETURN : No field options");
+	}
+}
+function getfamplan() {
+	var db_qury = db_query_sel_famplan();
+	log.info("CONTROLLER : fieldoptions-->getfamplan() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getfamplan() RETURN : No field options");
+	}
+}
+function getoccupsector() {
+	var db_qury = db_query_sel_occupsector();
+	log.info("CONTROLLER : fieldoptions-->getoccupsector() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getoccupsector() RETURN : No field options");
+	}
+}
+function getoccupcate() {
+	var db_qury = db_query_sel_occupcate();
+	log.info("CONTROLLER : fieldoptions-->getoccupcate() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getoccupcate() RETURN : No field options");
+	}
+}
+function getoccupation() {
+	var db_qury = db_query_sel_occupation();
+	log.info("CONTROLLER : fieldoptions-->getoccupation() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getoccupation() RETURN : No field options");
+	}
+}
+function getaccidtype() {
+	var db_qury = db_query_sel_accidtype();
+	log.info("CONTROLLER : fieldoptions-->getaccidtype() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->getaccidtype) RETURN : No field options");
+	}
+}
+function get_bodypart() {
+	var db_qury = db_query_sel_bodypart();
+	log.info("CONTROLLER : fieldoptions-->get_bodypart() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->get_bodypart) RETURN : No field options");
+	}
+}
+function get_disability() {
+	var db_qury = db_query_sel_disability();
+	log.info("CONTROLLER : fieldoptions-->get_disability() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->get_bodypart) RETURN : No field options");
+	}
+}
+function invokeError(msg) {
+	log.info(msg);
+	return {
+		"error" : true,
+		"errorMsg" : msg
+	};
+}
+
+%>

@@ -1,0 +1,5 @@
+
+function fieldoptions(){
+    var fieldopt = "<a href="../api/fieldoptions.jag?action=getfieldoptions">get field options</a>";    
+    document.getElementById("view_feeding_list").innerHTML='<h1>HELLO NUWAN</h1>';
+};

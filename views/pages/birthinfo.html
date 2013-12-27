@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nirogi Lanka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spot On Solutions (Private) Limited">
+  <meta name="author" content="Nuwan Waidyanatha">
+
+	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
+	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
+	<!--script src="js/less-1.3.3.min.js"></script-->
+	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+   -->
+  <link rel="shortcut icon" href="img/favicon.png">  
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
+    <script type="text/javascript" src="../js/fieldoptions.jag"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					<a href="#">Start</a> <span class="divider">/</span>
+				</li>
+				<li>
+					<a href="#">House</a> <span class="divider">/</span>
+				</li>
+				<li class="active">
+					Data
+				</li>
+			</ul>
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">NIROGI</a>
+				</div>	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="home.jag">Home</a>
+						</li>
+                        <li>
+							<a href="#"><strong>New Survey</strong></a>
+                        </li>
+                        <li>
+							<a href="#">Settings</a>
+                        </li>
+						<li>
+							<a href="#">Help</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search-household">
+                        <div class="form-group">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <button id="purge" type="button" class="btn btn-primary btn-sm active">Purge Storage</button>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Work Mode<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Off-line</a></li>
+                                        <li><a href="#">Connected</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div> 
+					</form>
+				</div>				
+			</nav>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-6 column">
+            <ul class="list-inline">
+                <li>
+                    <img class="img-rounded" width="120px" alt="140x140" src="../img/nirigilogo.png">
+                </li>
+                <li>
+                    <div class="page-header">
+                        <h3>Nirogi Lanka<br><small>Mobile Health Information System</small></h3>
+                    </div>
+                </li>
+            </ul>            			
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-6 column">
+            <form role="form">
+                <div class="form-group">
+                    <h4><small>BIRTH INFORMATION</small></h4>
+                    <ul class="list-inline">
+                        <li><label>Mother :: </label></li>
+                        <li><p>[X1234] Sandamail Kumari Ratnadiwakara</p></li>
+<!--                        <li><button class="btn btn-sm btn-primary" id="get-mom" name="get-mom">Assign</button></li> -->
+                            <a id="modal-mother" href="#modal-container-mother" role="button" class="btn btn-primary" data-toggle="modal">FIND</a>			
+                            <div class="modal fade" id="modal-container-mother" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h4 class="modal-title" id="myModalLabel">SEARCH MOTHER</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <li>
+                                                <input class="form-control" type="text" name="txtsearch" id="txtsearch" onClick="search()">
+                                            </li>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Select</button>
+                                        </div>
+                                    </div>				
+                                </div>				
+                            </div>                        
+                        <li><label>Reg No. ::</label><input type="text" id="reg-no" name="reg-no" /></li>
+                    </ul>
+                    <hr>
+                    <ul class="list-inline">
+                        <li><label>DOB :: </label><input type="date" name="dob" id="dob"></li>
+                        <li><label>EDD :: </label><input type="date" name="edd" id="edd"></li>
+                        <li><label>Maturity :: </label></li>
+                        <li><p>Calculate(EDD-DOB)</p></li>
+                    </ul> 
+                    <ul class="list-inline">
+                        <li><label>APGAR :: </label><input type="number" name="apgar" id="apgar"></li>
+                        <li><label>Weight@birth :: </label><input type="number" name="bweight" id="bweight"><label>g</label></li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li><label>OFC@birth :: </label><input type="number" name="ofcc-birth" id="ofcc-birth"><label>cm</label></li>
+                        <li><label>Length@birth :: </label><input type="number" name="blenght" id="blength"><label>cm</label></li>
+                    </ul> 
+                    <ul class="list-inline">
+                        <li><label>Initiation of breast feeding :: </label></li>
+                        <li>
+                            <select required>
+                                <option value="None">No Breast Feeding</option>
+                                <option value="00-01 hrs">Within 1 hrs</option>
+                                <option value="01-24 hrs">1 to 24 hrs</option>
+                                <option value="24-I">After 24 hrs</option>
+                                <option value="NA">Not Applicable</option>
+                            </select>                            
+                        </li>
+                        <li>
+                            <div id="view-feeding-body">
+                                <label>Initiation of breast feeding :: </label>
+                                <%
+                                    var total = 1 + 1;
+    print(total);
+%>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li><label>Neonatal complications :: </label></li>
+                        <li>
+                            <select multiple>
+                                <option value="Asphyxia">Asphyxia</option>
+                                <option value="Prematurity">Prematurity</option>
+                                <option value="SFGA/IUGR">SFGA/IUGR</option>
+                                <option value="Sepsis">Sepsis</option>
+                                <option value="Jaundice">Jaundice</option>
+                                <option value="Congenital Abnormalities">Congenital Abnormalities</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </li>
+                        <li><label>Other neonatal complications ::</label><input type="text" name="neonatal" id="neonatal"/></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

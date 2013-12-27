@@ -1,0 +1,22 @@
+<%
+
+include("../../model/dbinit.jag");
+include("../../model/fieldoptions.jag");
+include("../../controller/fieldoptions.jag");
+
+ var action = request.getParameter('action');
+ var optCategory = request.getParameter('optCategory');
+ var optIndex = request.getParameter('optIndex');
+ var optName = request.getParameter('optName');
+
+
+switch(action) {
+    case "getfieldoptions":
+        log.info("API : getfieldoptions EXEC : get "+optCategory);
+        print(getfieldoptions(optCategory));
+        break;
+	default:
+		print(invokeError("API : getfieldoptions RETURN : field_options action not defined"));
+}
+
+%>

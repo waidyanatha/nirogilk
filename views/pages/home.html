@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nirogi Lanka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Spot On Solutions (Private) Limited">
+  <meta name="author" content="Nuwan Waidyanatha, Madhuka Udanttha, Gihan Tharanga">
+	
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="./js/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+   -->
+  <link rel="shortcut icon" href="img/favicon.png">  
+	<script type="text/javascript" src="../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/scripts.js"></script>
+</head>
+
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<ul class="breadcrumb">
+				<li>
+					<a href="#">Start</a> <span class="divider">/</span>
+				</li>
+				<li>
+					<a href="#">House</a> <span class="divider">/</span>
+				</li>
+				<li class="active">
+					Data
+				</li>
+			</ul>
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">NIROGI DIVIYA</a>
+				</div>	
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active">
+							<a href="home.jag">Home</a>
+						</li>
+                        <li>
+							<a href="#"><strong>New Survey</strong></a>
+                        </li>
+                        <li>
+							<a href="#">Settings</a>
+                        </li>
+						<li>
+							<a href="#">Help</a>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right" role="search-household">
+                        <div class="form-group">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <button id="purge" type="button" class="btn btn-primary btn-sm active">Purge Storage</button>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Work Mode<strong class="caret"></strong></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Off-line</a></li>
+                                        <li><a href="#">Connected</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div> 
+					</form>
+				</div>				
+			</nav>
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-6 column">
+            <ul class="list-inline">
+                <li>
+                    <img class="img-rounded" width="120px" alt="140x140" src="../img/nirigilogo.png">
+                </li>
+                <li>
+                    <div class="page-header">
+                        <h3>Nirogi Lanka<br><small>Mobile Health Information System</small></h3>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language<strong class="caret"></strong></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">Sinhala</a></li>
+                        <li><a href="#">Tamil</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <input class="form-control" type="text" name="txtsearch" id="txtsearch" onClick="checkPrice()">
+                </li>                <li>
+<!--                    <a id="modal-search" href="#modal-container-search" role="button" class="btn" data-toggle="modal">Search</a>
+-->			
+                    <button id="modal-search" href="#modal-container-search" role="button" class="btn btn-primary" data-toggle="modal">Search</button>			
+                    <div class="modal fade" id="modal-container-search" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h4 class="modal-title" id="myModalLabel">HOUSEHOLD SEARCH RESULTS</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>Select</>
+                                                    <th>ID</th>
+                                                    <th>Address</th>
+                                                    <th>City Town</th>
+                                                                <th>Head Person</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="success">
+                                                                <td>
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox" />
+                                                                    </div>
+                                                                </td>
+                                                                <td>X1234</td>
+                                                                <td>52 Nelumkumbura road</td>
+                                                                <td>Pepiliyana</td>
+                                                                <td>S. Paneerselvam (Father)</td>
+                                                            </tr>
+                                                            <tr class="active">
+                                                                <td>
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox" />
+                                                                    </div>
+                                                                </td>
+                                                                <td>Y5678</td>
+                                                                <td>12/1 pothupitiya lane</td>
+                                                                <td>Nugegoda</td>
+                                                                <td>Nalaka De Silva (Father)</td>
+                                                            </tr>
+                                                            <tr class="warning">
+                                                                <td>
+                                                                    <div class="checkbox">
+                                                                        <input type="checkbox" />
+                                                                    </div>
+                                                                </td>
+                                                                <td>X0987</td>
+                                                                <td>123 Nelumkumbura road</td>
+                                                                <td>Pepiliyana</td>
+                                                                <td>Udaya Kumara Weerasinghe (Grandfather)</td>
+                                                            </tr>
+                                                        <tr class="danger">
+                                                        <td>
+                                                            <div class="checkbox">
+                                                                <input type="checkbox" />
+                                                            </div>
+                                                        </td>
+                                                        <td>Z2525</td>
+                                                        <td>85 3/1 Darly place</td>
+                                                        <td>Nugegoda</td>
+                                                        <td>Menaka Ruwan De Silva (Father)</td>
+                                                    </tr>
+                                                    <tr class="success">
+                                                    <td>
+                                                        <div class="checkbox">
+                                                            <input type="checkbox" />
+                                                        </div>
+                                                    </td>
+                                                    <td>Z6709</td>
+                                                    <td>02 second lane, Athurigiriya road</td>
+                                                    <td>Udahamulla</td>
+                                                    <td>Malkanthi Wethasinghe (Mother)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Select</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>
+                    </li>
+                </ul>            			
+		</div>
+	</div>
+	<div class="row clearfix">
+		<div class="col-md-6 column">
+			<div class="panel-group" id="panel-639660">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-639660" href="#panel-element-751798">Household ::</a>
+                        h5551212 - Ethulkotte, Rajagiriya
+                         </div>
+					<div id="panel-element-751798" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="list-inline">
+                                <li><label><i>Unique ID :: </i></label></li>
+                                <li><text>h5551212</text>
+                            </ul>
+							<ul class="list-inline">
+                                <li><label><i>Address :: </i></label></li>
+                                <li><text>56/10 Darmapala mawatha, Ethulkotte, Rajagitiya</text></li>
+                            </ul>
+                                <button id="edit household" type="button" class="btn btn-primary btn-sm active">Edit House Details</button>
+                                <hr>
+                            <ul>
+                                <li><a href="#">[X4321] Chandrani Lalitha Rathnawansa(Mother - Head)</a></li>
+                                <li><a href="#">[X5432] Upul Jayantha Rathnawansa(Son)</a></li>
+                                <li><a href="#">[X6543] Sandamali Nelum Rathnawansa(Daughter)</a></li>
+                                <li>[X4344] Doris Kumari Athukorale (Grandmother)</li
+                            </ul>
+                            <button id="add person" type="button" class="btn btn-primary btn-sm active">Add Person</button>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-639660" href="#panel-element-312835">Person details ::</a>
+                         X4344, Doris Kumari Athukorale (Grandmother)
+					</div>
+					<div id="panel-element-312835" class="panel-collapse collapse">
+						<div class="panel-body">
+							<ul class="list-inline">
+                                <li><label><i>Person ID :: </i></label></li>
+                                <li><text>X9876</text>
+                                <li><label><i>Given Names :: </i></label></li>
+                                <li><text>Doris Kumari</text>
+                                <li><label><i>Surname :: </i></label></li>
+                                <li><text>Athukorale</text>
+                            </ul>
+							<ul class="list-inline">
+                                <li><label><i>Sex :: </i></label></li>
+                                <li><text>Female</text>
+                                <li><label><i>DOB :: </i></label></li>
+                                <li><text>1959-Jan-10</text>
+                            </ul>
+                            <button id="Edit Person" type="button" class="btn btn-primary btn-sm active">Edit Person</button>
+                            <button id="Delete Person" type="button" class="btn btn-primary btn-sm active">Remove Person</button>
+						</div>
+					</div>
+				</div>
+			</div> 
+		</div>
+	</div> 
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="tabbable" id="tabs-949085">
+				<ul class="nav nav-tabs">
+					<li class="active">
+						<a href="#panel-birth" data-toggle="tab">Birth-Info</a>
+					</li>
+					<li>
+						<a href="#panel-vaccination" data-toggle="tab">Vaccination</a>
+					</li>
+					<li>
+						<a href="#panel-disease" data-toggle="tab">Diseases</a>
+					</li>
+					<li>
+						<a href="#panel-occupation" data-toggle="tab">Occupation</a>
+					</li>
+					<li>
+						<a href="#panel-lifestyle" data-toggle="tab">Lifestyle</a>
+					</li>
+					<li>
+						<a href="#panel-prenatal" data-toggle="tab">Prenatal</a>
+					</li>
+					<li>
+						<a href="#panel-pregnancy" data-toggle="tab">Pregnancy</a>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div class="tab-pane active" id="panel-birth">
+						<p>
+							My BIRTH INFO
+						</p>
+                        <a href="birthinfo.html" class="btn btn-primary">Edit Birth</a>                        
+                        <a id="modal-birth-history" href="#modal-container-birth-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
+                        <div class="modal fade" id="modal-container-birth-history" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            BIRTH INFO UPDATE HISTORY
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>                        
+					</div>
+					<div class="tab-pane" id="panel-vaccination">
+						<p>
+							VACCINATION INFO
+						</p>
+                        <a id="modal-vaccination" href="#modal-container-vaccination" role="button" class="btn" data-toggle="modal">EDIT</a>			
+                        <div class="modal fade" id="modal-container-vaccination" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            EDIT VACCINATION DETAILS
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>                        
+					</div>
+					<div class="tab-pane" id="panel-disease">
+						<p>
+							DISAESE INFO
+						</p>
+                        <a id="modal-disease" href="#modal-container-disease" role="button" class="btn" data-toggle="modal">EDIT</a>			
+                        <div class="modal fade" id="modal-container-disease" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            EDIT DISEASE DETAILS
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>                        
+					</div>
+					<div class="tab-pane" id="panel-occupation">
+						<p>
+							OCCUPATIONN INFO
+						</p>
+                        <a id="modal-occupation" href="#modal-container-occupation" role="button" class="btn" data-toggle="modal">EDIT</a>			
+                        <div class="modal fade" id="modal-container-occupation" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            EDIT OCCUPATION DETAILS
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>                        
+					</div>
+					<div class="tab-pane" id="panel-lifestyle">
+						<p>
+							LIFESTYLE INFO
+						</p>
+                        <a id="modal-lifestyle" href="#modal-container-lifestyle" role="button" class="btn" data-toggle="modal">EDIT</a>			
+                        <div class="modal fade" id="modal-container-lifestyle" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            EDIT LIFESTYLE DETAILS
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>                        
+					</div>
+					<div class="tab-pane" id="panel-prenatal">
+						<p>
+							PRENATAL INFO
+						</p>                        
+                        <a id="modal-prenatal" href="#modal-container-prenatal" role="button" class="btn" data-toggle="modal">EDIT</a>			
+                        <div class="modal fade" id="modal-container-prenatal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            EDIT PRENATAL DETAILS
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>
+                    </div>
+					<div class="tab-pane" id="panel-pregnancy">
+						<p>
+							PREGNANCY INFO
+						</p>
+                        <a id="modal-pregnancy" href="#modal-container-pregnancy" role="button" class="btn" data-toggle="modal">EDIT</a>			
+                        <div class="modal fade" id="modal-container-pregnancy" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title" id="myModalLabel">
+                                            EDIT PREGNANCY DETAILS
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>				
+                            </div>				
+                        </div>
+					</div>
+				</div>                    
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
