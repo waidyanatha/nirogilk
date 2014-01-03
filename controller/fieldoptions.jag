@@ -43,6 +43,14 @@ function getfieldoptions(opt_cate){
             log.info("CONTROLLER : fieldoptions EXEC : get_disability()");
             print(get_disability());
             break;
+        case "milestones":
+            log.info("CONTROLLER : fieldoptions EXEC : get_milestones()");
+            print(get_milestones());
+            break;
+        case "supplements":
+            log.info("CONTROLLER : fieldoptions EXEC : get_supplements()");
+            print(get_supplements());
+            break;
         default:
             print(invokeError("CONTROLLER : fieldoptions RETURN : field_options action not define"));
     }
@@ -176,7 +184,33 @@ function get_disability() {
 		"results" : results
 	};
 	}else {
-		return invokeError("CONTROLLER : fieldoptions-->get_bodypart) RETURN : No field options");
+		return invokeError("CONTROLLER : fieldoptions-->get_disability) RETURN : No field options");
+	}
+}
+function get_milestones() {
+	var db_qury = db_query_sel_milestones();
+	log.info("CONTROLLER : fieldoptions-->get_milestones() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->get_milestones) RETURN : No field options");
+	}
+}
+function get_supplements() {
+	var db_qury = db_query_sel_supplements();
+	log.info("CONTROLLER : fieldoptions-->get_supplements() EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : fieldoptions-->get_supplements) RETURN : No field options");
 	}
 }
 function invokeError(msg) {

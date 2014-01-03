@@ -1,5 +1,25 @@
+<%
+//This is a dynamic JavaScript file
+response.contentType = "application/javascript";
+var mainContext = request.getContextPath();
+%>
 
 function fieldoptions(){
-    var fieldopt = "<a href="../api/fieldoptions.jag?action=getfieldoptions">get field options</a>";    
-    document.getElementById("view_feeding_list").innerHTML='<h1>HELLO NUWAN</h1>';
+    $.getJSON( "../api/fieldoptions.jag?action=getfieldoptions&optCategory=breastfeed" , function( data ) {
+        var htmlStr = "";
+        console.log(data.error);
+        console.log(data.results);
+//        for (var i in data.results)
+//        {
+//            htmlStr += "<li id='" + data.results[i].opt_category + data.results[i].opt_index + "'>" + data.results[i].opt_name + "</li>" ;
+//        };
+        htmlStr += '<h1>HELLO NUWAN</h1>';
+        document.getElementById("view_feeding_list").innerHTML=htmlStr;
+    }).done(function(d) {
+                alert("success");
+            }).fail(function(d) {
+                alert("error");
+            }).always(function(d) {
+                alert("complete");
+            });
 };

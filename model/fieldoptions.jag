@@ -54,9 +54,19 @@ function db_query_sel_bodypart() {
 }
 // DISABILITY
 function db_query_sel_disability() {
-    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category =  'disability' LIMIT 0 , 30; ";
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category = 'disability' LIMIT 0 , 30; ";
     log.info("MODEL : fieldoptions EXEC : db_query_sel_disability() RETURN : "+outStr);
     return outStr;
 }
-
+// MILESTONES
+function db_query_sel_milestones() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category = 'milestones' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_milestones() RETURN : "+outStr);
+    return outStr;
+}
+function db_query_sel_supplements() {
+    var outStr = "SELECT opt_category, opt_index, opt_name FROM field_options WHERE opt_category = 'supplements' LIMIT 0 , 30; ";
+    log.info("MODEL : fieldoptions EXEC : db_query_sel_supplements() RETURN : "+outStr);
+    return outStr;
+}
 %>

@@ -101,7 +101,8 @@
 					<div class="col-sm-offset-2 col-sm-10">
 <!--						 <button type="submit" class="btn btn-primary">Sign in</button>
 -->
-						 <a href="views/pages/home.html" class="btn btn-primary">Sign in</a>					</div>
+						 <a href="views/pages/home.jag" class="btn btn-primary">Sign in</a>					
+                    </div>
 				</div>
 			</form>
 		</div>

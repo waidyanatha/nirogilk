@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 27, 2013 at 12:20 AM
+-- Generation Time: Jan 02, 2014 at 04:15 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.16
 
@@ -212,7 +212,30 @@ INSERT INTO `field_options` (`opt_category`, `opt_index`, `opt_name`) VALUES
 ('bodypart', 4, 'Chest'),
 ('disability', 0, 'None'),
 ('disability', 1, 'Loss of Vision'),
-('disability', 2, 'Loss of Limbs');
+('disability', 2, 'Loss of Limbs'),
+('milestones', 0, 'None'),
+('milestones', 1, 'Delayed'),
+('milestones', 2, 'Age appropriate'),
+('supplements', 0, 'None'),
+('supplements', 1, 'None'),
+('supplements', 2, 'Thriposha/CSB'),
+('supplements', 3, 'Micronutrient'),
+('supplements', 4, 'Milk'),
+('supplements', 5, 'Other'),
+('growthpattern', 0, 'None'),
+('growthpattern', 1, 'Parallel to SD zones'),
+('growthpattern', 3, 'Upward'),
+('growthpattern', 4, 'Irregular'),
+('growthpattern', 2, 'Faltering'),
+('growthpattern', 5, 'Not applicable'),
+('feeding', 0, 'None'),
+('feeding', 1, 'Breast Feeed'),
+('feeding', 2, 'Water'),
+('feeding', 3, 'Liquids'),
+('feeding', 4, 'Milk'),
+('feeding', 5, 'Semisolids'),
+('feeding', 6, 'Solids'),
+('feeding', 7, 'Not Breast Feed');
 
 -- --------------------------------------------------------
 
@@ -337,7 +360,7 @@ CREATE TABLE IF NOT EXISTS `persons` (
   `persons_create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `persons_modified_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`persons_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
