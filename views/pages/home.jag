@@ -105,7 +105,7 @@
                 </li>                <li>
 <!--                    <a id="modal-search" href="#modal-container-search" role="button" class="btn" data-toggle="modal">Search</a>
 -->			
-                    <button id="modal-search" href="#modal-container-search" role="button" class="btn btn-primary" data-toggle="modal">Search</button>			
+                    <button id="modal-search" href="#modal-container-search" role="button" class="btn btn-sm btn-primary" data-toggle="modal">Search</button>			
                     <div class="modal fade" id="modal-container-search" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
@@ -184,7 +184,7 @@
                                         </table>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-primary">Select</button>
+                                        <button type="button" class="btn btn-sm btn-primary">Select</button>
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
                                     </div>
                                 </div>				
@@ -212,7 +212,7 @@
                                 <li><label><i>Address :: </i></label></li>
                                 <li><text>56/10 Darmapala mawatha, Ethulkotte, Rajagitiya</text></li>
                             </ul>
-                                <button id="edit household" type="button" class="btn btn-primary btn-sm active">Edit House Details</button>
+                                <a href="household.jag" class="btn btn-sm btn-primary">Edit House Details</a>                        
                                 <hr>
                             <ul>
                                 <li><a href="#">[X4321] Chandrani Lalitha Rathnawansa(Mother - Head)</a></li>
@@ -245,7 +245,7 @@
                                 <li><label><i>DOB :: </i></label></li>
                                 <li><text>1959-Jan-10</text>
                             </ul>
-                            <button id="Edit Person" type="button" class="btn btn-primary btn-sm active">Edit Person</button>
+                            <button id="Edit Person" type="button" class="btn btn-sm btn-primary active">Edit Person</button>
                             <button id="Delete Person" type="button" class="btn btn-primary btn-sm active">Remove Person</button>
 						</div>
 					</div>
@@ -284,8 +284,8 @@
 						<p>
 							My BIRTH INFO
 						</p>
-                        <a href="birthinfo.jag" class="btn btn-primary">Edit Birth</a>                        
-                        <a id="modal-birth-history" href="#modal-container-birth-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
+                        <a href="birthinfo.jag" class="btn btn-sm btn-primary">Edit Birth</a>                        
+<!--                        <a id="modal-birth-history" href="#modal-container-birth-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
                         <div class="modal fade" id="modal-container-birth-history" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -298,11 +298,12 @@
                                     <div class="modal-body">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-sm btn-primary">Save changes</button>
                                     </div>
                                 </div>				
                             </div>				
-                        </div>                        
+                        </div>
+-->                        
 					</div>
 					<div class="tab-pane" id="panel-vaccination">
 						<p>
@@ -322,7 +323,7 @@
                                         ...
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-sm btn-primary">Save changes</button>
                                     </div>
                                 </div>				
                             </div>				
@@ -332,31 +333,32 @@
 						<p>
 							DISAESE INFO
 						</p>
-                        <a id="modal-disease" href="#modal-container-disease" role="button" class="btn" data-toggle="modal">EDIT</a>			
-                        <div class="modal fade" id="modal-container-disease" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <a href="disease.jag" class="btn btn-sm btn-primary">Add New</a>                        
+<!--                        <a id="modal-disease-history" href="#modal-container-disease-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
+                        <div class="modal fade" id="modal-container-disease-history" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         <h4 class="modal-title" id="myModalLabel">
-                                            EDIT DISEASE DETAILS
+                                            DISEASE INFO UPDATE HISTORY
                                         </h4>
                                     </div>
                                     <div class="modal-body">
-                                        ...
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-sm btn-primary">Save changes</button>
                                     </div>
                                 </div>				
                             </div>				
-                        </div>                        
-					</div>
+                        </div>
+-->                 
+                    </div>
 					<div class="tab-pane" id="panel-occupation">
 						<p>
 							OCCUPATION INFO
 						</p>
-                        <a href="occupation.jag" class="btn btn-primary">Edit occupation</a>                        
+                        <a href="occupation.jag" class="btn btn-sm btn-primary">Edit occupation</a>                        
                         <a id="modal-occup-edit-history" href="#modal-container-occup-edit-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
                         <div class="modal fade" id="modal-container-occup-edit-history" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -370,7 +372,7 @@
                                     <div class="modal-body">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-sm btn-primary">Save changes</button>
                                     </div>
                                 </div>				
                             </div>				
@@ -380,31 +382,32 @@
 						<p>
 							LIFESTYLE INFO
 						</p>
-                        <a id="modal-lifestyle" href="#modal-container-lifestyle" role="button" class="btn" data-toggle="modal">EDIT</a>			
-                        <div class="modal fade" id="modal-container-lifestyle" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <a href="lifestyle.jag" class="btn btn-sm btn-primary">Edit Lifestyle</a>                        
+<!--                        <a id="modal-lifestyle-history" href="#modal-container-lifestyle-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
+                        <div class="modal fade" id="modal-container-lifestyle-history" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         <h4 class="modal-title" id="myModalLabel">
-                                            EDIT LIFESTYLE DETAILS
+                                            LIFESTYLE INFO UPDATE HISTORY
                                         </h4>
                                     </div>
                                     <div class="modal-body">
-                                        ...
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-sm btn-primary">Save changes</button>
                                     </div>
                                 </div>				
                             </div>				
-                        </div>                        
+                        </div>
+-->                        
 					</div>
 					<div class="tab-pane" id="panel-prenatal">
 						<p>
 							PRENATAL INFO
 						</p>
-                        <a href="prenatal.jag" class="btn btn-primary">Edit Prenatal</a>                        
+                        <a href="prenatal.jag" class="btn btn-sm btn-primary">Edit Prenatal</a>                        
                         <a id="modal-prenatal-history" href="#modal-container-prenatal-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
                         <div class="modal fade" id="modal-container-prenatal-history" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
@@ -418,7 +421,7 @@
                                     <div class="modal-body">
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-sm btn-primary">Save changes</button>
                                     </div>
                                 </div>				
                             </div>				
@@ -428,25 +431,26 @@
 						<p>
 							PREGNANCY INFO
 						</p>
-                        <a id="modal-pregnancy" href="#modal-container-pregnancy" role="button" class="btn" data-toggle="modal">EDIT</a>			
-                        <div class="modal fade" id="modal-container-pregnancy" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <a href="pregnancy.jag" class="btn btn-sm btn-primary">Add New</a>                        
+<!--                        <a id="modal-pregnancy-history" href="#modal-container-pregnancy-history" role="button" class="btn" data-toggle="modal">View Edit History</a>			
+                        <div class="modal fade" id="modal-container-pregnancy-history" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                         <h4 class="modal-title" id="myModalLabel">
-                                            EDIT PREGNANCY DETAILS
+                                            PREGNANCY INFO UPDATE HISTORY
                                         </h4>
                                     </div>
                                     <div class="modal-body">
-                                        ...
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Save changes</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-sm btn-primary">Save changes</button>
                                     </div>
                                 </div>				
                             </div>				
                         </div>
+-->                        
 					</div>
 				</div>                    
 			</div>

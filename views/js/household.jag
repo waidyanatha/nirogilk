@@ -1,0 +1,12 @@
+<%
+//This is a dynamic JavaScript file
+response.contentType = "application/javascript";
+var mainContext = request.getContextPath();
+%>
+
+document.getElementById("currency").onblur =function (){    
+    this.value = parseFloat(this.value.replace(/,/g, ""))
+                    .toFixed(2)
+                    .toString()
+                    .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}

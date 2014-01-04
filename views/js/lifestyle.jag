@@ -1,0 +1,27 @@
+<%
+//This is a dynamic JavaScript file
+response.contentType = "application/javascript";
+var mainContext = request.getContextPath();
+%>
+
+function initVals() {
+    document.getElementById('litobacco').style.visibility = 'hidden';
+    document.getElementById('lialcohol').style.visibility = 'hidden';
+    document.getElementById('linarcotics').style.visibility = 'hidden';
+}
+
+function yesnoCheck(checkbox, input) {
+    if (document.getElementById(checkbox).checked) {
+        document.getElementById(input).style.visibility = 'visible';
+    } else {
+        document.getElementById(input).style.visibility = 'hidden';
+    }
+}
+
+function aesthetic() {
+    if (document.getElementById("aesthetic").checked) {
+        document.getElementById("lifeskill").checked = 'checked';
+    } else {
+        document.getElementById("lifeskill").checked = '';
+    }
+}

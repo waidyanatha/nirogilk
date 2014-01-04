@@ -109,7 +109,14 @@
 		<div class="col-md-6 column">
             <form role="form">
                 <div class="form-group">
-                    <h4><small>BIRTH INFORMATION</small></h4>
+                    <ul class="list-inline">
+                        <li><h4><small>BIRTH INFORMATION</small></h4></li>
+                        <li>
+                            <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </li>
+                    </ul>
                     <ul class="list-inline">
                         <li><label>Mother :: </label></li>
                         <li><p>[X1234] Sandamail Kumari Ratnadiwakara</p></li>
@@ -224,12 +231,14 @@
                         <li><label>Hospitalization :: </label>
                             <input type="number" min=0 max=99 step=1 size="1" name="hospitalization" id="hospitalization" required placeholder=" 0-99" value=""></li>
                     </ul>
-                    <hr>
-					<div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">Save</button>
-<!--                        <a href="views/pages/home.jag" class="btn btn-primary">Sign in</a>
--->					
-                    </div>                    
+                    <ul class="list-inline">
+                        <li><h4><small>BIRTH INFORMATION</small></h4></li>
+                        <li>
+                            <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </li>
+                    </ul>                
                 </div>
             </form>
         </div>

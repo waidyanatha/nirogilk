@@ -108,7 +108,14 @@
 		<div class="col-md-6 column">
             <form role="form">
                 <div class="form-group">
-                    <h4><small>OCCUPATION</small></h4>
+                    <ul class="list-inline">
+                        <li><h4><small>OCCUPATION INFORMATION</small></h4></li>
+                        <li>
+                            <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </li>
+                    </ul>
                     <ul class="list-inline">			
                             <div class="modal fade" id="modal-container-mother" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -197,7 +204,7 @@
                         </li>
                     </ul>
                     <ul class="list-inline">
-                        <li><label>Compnestation paid? :: </label><input type="checkbox" name="compPaid" id="compPaid"></li>
+                        <li><label>Compensation paid? :: </label><input type="checkbox" name="compPaid" id="compPaid"></li>
                     </ul>
                     <ul class="list-inline">
                         <a id="modal-illness-history" href="#modal-container-illness-history" role="button" class="btn" data-toggle="modal">View Occupation Illness History</a>			
@@ -218,6 +225,14 @@
                                 </div>				
                             </div>				
                         </div>                        
+                    </ul>
+                    <ul class="list-inline">
+                        <li><h4><small>OCCUPATION INFORMATION</small></h4></li>
+                        <li>
+                            <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </form>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nirogi Lanka</title>
+
+	<script type="text/javascript" src="../js/jquery.js"></script>  
+    <script type="text/javascript" src="../js/fieldoptions.jag"></script>
+
+</head>
+
+<body onload="fieldoptions()">
+    <div id="view_feeding_list">hi</div>
+</body>
+</html>

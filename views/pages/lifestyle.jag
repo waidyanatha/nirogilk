@@ -34,9 +34,10 @@
     <script type="text/javascript" src="../js/util.js"></script>
     <script type="text/javascript" src="../js/mustache.js"></script>
     <script type="text/javascript" src="../js/fieldoptions.jag"></script>
+    <script type="text/javascript" src="../js/lifestyle.jag"></script>
 </head>
 
-<body>
+<body onload="initVals()">
 <div class="container">
 	<div class="row clearfix">
 		<div class="col-md-12 column">
@@ -45,7 +46,7 @@
 					<a href="#">Start</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="#">Woman</a> <span class="divider">/</span>
+					<a href="#">Pregnancy</a> <span class="divider">/</span>
 				</li>
 				<li class="active">
 					Data
@@ -109,61 +110,53 @@
             <form role="form">
                 <div class="form-group">
                     <ul class="list-inline">
-                        <li><h4><small>WOMAN (15-49) INFORMATION</small></h4></li>
+                        <li><h4><small>LIFESTYLE INFORMATION</small></h4></li>
                         <li>
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Save</button>
-<!--                                <a href="views/pages/home.jag" class="btn btn-primary">Sign in</a>
--->					
+                            <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                         </li>
                     </ul>
                     <hr>
-                    <h4><small>AGE AT </small></h4>
+                    <h4><small>EVER CONSUME (check box if YES)</small></h4>
                     <ul class="list-inline">
-                        <li><label>Menache :: </label><input type="date" size="10" name="menache" id="dob"></li>
-                        <li><label>Marriage :: </label><input type="date" size="10" name="marriage" id="marriage"></li>
+                        <li><label>Tobacco? </label><input type="checkbox" name="tobacco" id="tobacco" onclick="yesnoCheck('tobacco','litobacco')"></li>
+                        <li id="litobacco"><label>When :: </label><input type="date" size="10" name="tobaccodate" id="tobaccodate"></li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li><label>Alcohole? </label><input type="checkbox" name="alcohol" id="alcohol" onclick="yesnoCheck('alcohol','lialcohol')"></li>
+                        <li id="lialcohol"><label>When :: </label><input type="date" size="10" name="alcoholdate" id="alcoholdate"></li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li><label>Narcotics? </label><input type="checkbox" name="narcotics" id="narcotics" onclick="yesnoCheck('narcotics','linarcotics')"></li>
+                        <li id="linarcotics"><label>When :: </label><input type="date" size="10" name="narcoticsdate" id="narcoticsdate"></li>
                     </ul>
                     <hr>
-                    <h4><small>PRE-PREGNANCY CARE</small></h4>
+                    <h4><small>UNDERGONE A (check box if YES)</small></h4>
                     <ul class="list-inline">
-                        <li><label>Rubella ::</label>
-                            <input list="rubella" size="10" name="rubella" >
-                            <datalist id="rubella">
-                                <option label="1" value="Yes"></option>
-                                <option label="0" value="No"></option>
-                            </datalist>
-                        </li>
-                        <li><label>Folic acid ::</label>
-                            <input list="folic" size="10" name="folic" >
-                            <datalist id="folic">
-                                <option label="1" value="Yes"></option>
-                                <option label="0" value="No"></option>
-                            </datalist>
-                        </li>
+                        <li><label>Life skill program in School? </label><input type="checkbox" name="lifeskill" id="lifeskill" ></li>
                     </ul>
                     <ul class="list-inline">
-                        <li>
-                            <div id="view_famplan_list"></div>
-                            <label>Family Planning method :: </label>
-                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=famplan">SELECT</a>
-                        </li>
-                    </ul>
-                    <ul class="list-inline">
-                        <li><label>Acceptance :: </label><input type="date" size="10" name="acceptance" id="acceptance"></li>
-                        <li>
-                            <div id="view_famplan_list"></div>
-                            <label>Service provider :: </label>
-                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=servprovcate">SELECT</a>
-                        </li>
-                    </ul>
-                    <ul class="list-inline">
-                        <li><label>Parity :: </label><input type="number" min=0 max=99 size="2" name="parity" id="parity" required placeholder=" 0-99"></li>
-                        <li><label>No. Children :: </label><input type="number" min=0 max=99 size="2" name="children" id="children" required placeholder=" 0-99"></li>
+                        <li><label>Reproductive health program in School? </label><input type="checkbox" name="repohealth" id="repohealth" ></li>
                     </ul>
                     <hr>
+                    <h4><small>BEEN INVOLVED IN (check box if YES)</small></h4>
                     <ul class="list-inline">
-                        <li><h4><small>WOMAN (15-49) INFORMATION</small></h4></li>
+                        <li><label>Organized sports program in School? </label><input type="checkbox" name="sports" id="sports" ></li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li><label>Aesthetic activity in/out School? </label><input type="checkbox" name="aesthetic" id="aesthetic" onclick="aesthetic()" ></li>
+                    </ul>
+                    <h4><small>HEALTH SEEKING BEHAVIOUR</small></h4>
+                    <label>Most frequent person consulted? </label>
+                    <input type="text" maxLength=255 size="40" name="consulted" id="consulted" placeholder="name of person">
+                    <label>Most health institution visited < 1 year? </label>
+                    <input type="text" maxLength=255 size="40" name="visitfacility" id="visitfacility" placeholder="name of facility">
+                    <label>What type of facility likely to attend? </label>
+                    <input type="text" maxLength=255 size="40" name="likefacility" id="likefacility" placeholder="name of facility">
+                    <hr>
+                    <ul class="list-inline">
+                        <li><h4><small>LIFESTYLE INFORMATION</small></h4></li>
                         <li>
                             <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-primary">Save</button>

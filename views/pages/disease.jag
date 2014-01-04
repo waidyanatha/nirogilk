@@ -45,7 +45,7 @@
 					<a href="#">Start</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="#">Woman</a> <span class="divider">/</span>
+					<a href="#">Disease</a> <span class="divider">/</span>
 				</li>
 				<li class="active">
 					Data
@@ -109,61 +109,43 @@
             <form role="form">
                 <div class="form-group">
                     <ul class="list-inline">
-                        <li><h4><small>WOMAN (15-49) INFORMATION</small></h4></li>
+                        <li><h4><small>DISEASE INFORMATION</small></h4></li>
                         <li>
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Save</button>
-<!--                                <a href="views/pages/home.jag" class="btn btn-primary">Sign in</a>
--->					
+                            <button type="submit" class="btn btn-primary">Save</button>
                             </div>
                         </li>
                     </ul>
                     <hr>
-                    <h4><small>AGE AT </small></h4>
+                    <h4><small>DELIVERY</small></h4>
                     <ul class="list-inline">
-                        <li><label>Menache :: </label><input type="date" size="10" name="menache" id="dob"></li>
-                        <li><label>Marriage :: </label><input type="date" size="10" name="marriage" id="marriage"></li>
+                        <li>
+                            <div id="view_facility_list"></div>
+                            <label>Place :: </label>
+                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=faciltytype">SELECT</a>
+                        </li>
+                        <li>
+                            <div id="view_delivery_list"></div>
+                            <label>Mode :: </label>
+                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=delivermode">SELECT</a>
+                        </li>
                     </ul>
-                    <hr>
-                    <h4><small>PRE-PREGNANCY CARE</small></h4>
                     <ul class="list-inline">
-                        <li><label>Rubella ::</label>
-                            <input list="rubella" size="10" name="rubella" >
-                            <datalist id="rubella">
-                                <option label="1" value="Yes"></option>
-                                <option label="0" value="No"></option>
-                            </datalist>
-                        </li>
-                        <li><label>Folic acid ::</label>
-                            <input list="folic" size="10" name="folic" >
-                            <datalist id="folic">
-                                <option label="1" value="Yes"></option>
-                                <option label="0" value="No"></option>
-                            </datalist>
-                        </li>
+                        <li><label>Delivery date :: </label><input type="date" size="10" name="deliverdate" id="deliverdate"></li>
                     </ul>
                     <ul class="list-inline">
                         <li>
-                            <div id="view_famplan_list"></div>
-                            <label>Family Planning method :: </label>
-                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=famplan">SELECT</a>
+                            <div id="view_postpcompl_list"></div>
+                            <label>Post partum complications :: </label>
+                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=postpcompl">SELECT</a>
                         </li>
                     </ul>
                     <ul class="list-inline">
-                        <li><label>Acceptance :: </label><input type="date" size="10" name="acceptance" id="acceptance"></li>
-                        <li>
-                            <div id="view_famplan_list"></div>
-                            <label>Service provider :: </label>
-                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=servprovcate">SELECT</a>
-                        </li>
-                    </ul>
-                    <ul class="list-inline">
-                        <li><label>Parity :: </label><input type="number" min=0 max=99 size="2" name="parity" id="parity" required placeholder=" 0-99"></li>
-                        <li><label>No. Children :: </label><input type="number" min=0 max=99 size="2" name="children" id="children" required placeholder=" 0-99"></li>
+                        <li><label>Diseased date :: </label><input type="date" size="10" name="diseasedate" id="diseasedate"></li>
                     </ul>
                     <hr>
                     <ul class="list-inline">
-                        <li><h4><small>WOMAN (15-49) INFORMATION</small></h4></li>
+                        <li><h4><small>DISEASE INFORMATION</small></h4></li>
                         <li>
                             <div class="col-sm-offset-2 col-sm-10">
                             <button type="submit" class="btn btn-primary">Save</button>

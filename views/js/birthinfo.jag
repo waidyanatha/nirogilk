@@ -1,0 +1,9 @@
+<%
+//This is a dynamic JavaScript file
+response.contentType = "application/javascript";
+var mainContext = request.getContextPath();
+%>
+
+function birth(dob,edd){    
+    document.getElementById("diff_dob_edd").innerHTML='<h1>HELLO NUWAN</h1>';
+};
