@@ -5,8 +5,11 @@ var mainContext = request.getContextPath();
 %>
 
 function initVals() {
-    document.getElementById('litobacco').style.visibility = 'hidden';
+    document.getElementById('lismoker').style.visibility = 'hidden';
+    document.getElementById('liexsmoker').style.visibility = 'hidden';
     document.getElementById('lialcohol').style.visibility = 'hidden';
+    document.getElementById('linonalco').style.visibility = 'hidden';
+    document.getElementById('liexalco').style.visibility = 'hidden';
     document.getElementById('linarcotics').style.visibility = 'hidden';
 }
 

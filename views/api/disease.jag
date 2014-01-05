@@ -1,0 +1,21 @@
+<%
+
+include("../../model/dbinit.jag");
+include("../../model/disease.jag");
+include("../../controller/disease.jag");
+
+ var action = request.getParameter('action');
+ var disCate = request.getParameter('disCate');
+ var disType = request.getParameter('disType');
+
+switch(action) 
+{
+    case "getdisease":
+        log.info("API : getdisease EXEC : get "+disCate);
+        print(getdisease(disCate));
+        break;
+	default:
+		print(invokeError("API : getdisease RETURN : disease action not defined"));
+}
+
+%>

@@ -309,7 +309,8 @@
 						<p>
 							VACCINATION INFO
 						</p>
-                        <a id="modal-vaccination" href="#modal-container-vaccination" role="button" class="btn" data-toggle="modal">EDIT</a>			
+                        <a href="vaccine.jag" class="btn btn-sm btn-primary">Add New</a>                        
+<!--                        <a id="modal-vaccination" href="#modal-container-vaccination" role="button" class="btn" data-toggle="modal">EDIT</a>			
                         <div class="modal fade" id="modal-container-vaccination" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -327,7 +328,8 @@
                                     </div>
                                 </div>				
                             </div>				
-                        </div>                        
+                        </div> 
+-->                        
 					</div>
 					<div class="tab-pane" id="panel-disease">
 						<p>

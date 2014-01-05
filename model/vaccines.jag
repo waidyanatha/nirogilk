@@ -1,0 +1,7 @@
+<%
+function db_query_sel_disease(opt) {
+    var outStr = "SELECT vaccine_uuid, disease FROM disease WHERE deactivate_dt IS NULL; ";
+    log.info("MODEL : disease EXEC : db_query_disease_get("+opt+") RETURN : " + outStr);
+    return outStr;
+}
+%>

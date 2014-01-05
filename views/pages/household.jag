@@ -118,7 +118,7 @@
                         </li>
                     </ul>
                     <hr>
-                    <h4><small>IDENTIFICATION</small></h4>
+                    <h4><small>GEOGRAPHICAL CODE</small></h4>
                     <ul class="list-inline">
                         <li>
                             <label>District :: </label>
@@ -136,9 +136,33 @@
                             <input type="text" min=0 max=999 size="3" pattern="\d+" id="gnd-no" name="gnd-no required placeholder=" 0 - 999" value=""/>
                         </li>
                         <li><label>Household No. ::</label>
-                            <input type="text" min=0 max=999999 size="6" pattern="\d+" id="house-no" name="house-no required placeholder=" 0 - 999999" value=""/>
+                            <input type="text" min=0 max=999999 size="6" pattern="\d+" id="house-no" name="house-no" required placeholder=" 0 - 999999" value=""/>
                         </li>
                     </ul>
+                    <ul class="list-inline">
+                        <li><label>Latitude</label></li>
+                        <li><input type="text" min=0 max=999999 size="6" pattern="\d+" id=" lat" name="lat" /></li>
+                        <li><label>Longitude</label></li>
+                        <li><input type="text" min=0 max=999999 size="6" pattern="\d+" id=" lon" name="lon" /></li>
+                    </ul>
+                    <ul class="list-inline">
+                        <li><label>Click to get location coordinates</label></li>
+                        <li><button type="submit" class="btn btn-primary">GET LOCATION</button></li>
+                    </ul>
+                    <hr>
+                    <h4><small>CONTACT DETAILS</small></h4>
+                    <label>Address Line 1 :: </label>
+                    <input type="text" maxLength=255 size="30" name="addr1" id="addr1" required>
+                    <label>Address Line 2 :: </label>
+                    <input type="text" maxLength=255 size="30" name="addr2" id="addr2">
+                     <label>City or Town  :: </label>
+                    <input type="text" maxLength=255 size="40" name="city" id="city" required >
+                    <label>Postal Code :: </label>
+                    <input type="number" min=0 max=999999 size="30" name="pcode" id="pcode" ><br>
+                    <label>Telephone 1 :: </label>
+                    <input type="tel" maxLength=10 size="10" name="tele1" id="tele1">
+                    <label>Telephone 2 :: </label>
+                    <input type="tel" maxLength=10 size="10" name="tele2" id="tele2">
                     <hr>
                     <h4><small>HEATH AREA</small></h4>
                     <ul class="list-inline">
@@ -156,18 +180,6 @@
                             <div id="view_geosector_list"></div>
                         </li>
                     </ul>
-                    <label>Address Line 1 :: </label>
-                    <input type="text" maxLength=255 size="30" name="addr1" id="addr1" required>
-                    <label>Address Line 2 :: </label>
-                    <input type="text" maxLength=255 size="30" name="addr2" id="addr2">
-                     <label>City or Town  :: </label>
-                    <input type="text" maxLength=255 size="40" name="city" id="city" required >
-                    <label>Postal Code :: </label>
-                    <input type="number" min=0 max=999999 size="30" name="pcode" id="pcode" ><br>
-                    <label>Telephone 1 :: </label>
-                    <input type="tel" maxLength=10 size="10" name="tele1" id="tele1">
-                    <label>Telephone 2 :: </label>
-                    <input type="tel" maxLength=10 size="10" name="tele2" id="tele2">
                     <hr>
                     <h4><small>HOUSE STRUCTURAL & MATERIAL</small></h4>
                     <ul class="list-inline">

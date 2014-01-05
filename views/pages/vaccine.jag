@@ -45,7 +45,7 @@
 					<a href="#">Start</a> <span class="divider">/</span>
 				</li>
 				<li>
-					<a href="#">Vaccin</a> <span class="divider">/</span>
+					<a href="#">Disease</a> <span class="divider">/</span>
 				</li>
 				<li class="active">
 					Data
@@ -108,60 +108,32 @@
 		<div class="col-md-6 column">
             <form role="form">
                 <div class="form-group">
-                    <h4><small>VACCINATIONS</small></h4>
                     <ul class="list-inline">
-                        <li><label>Mother :: </label></li>
-                        <li><p>[X1234] Sandamail Kumari Ratnadiwakara</p></li>
-<!--                        <li><button class="btn btn-sm btn-primary" id="get-mom" name="get-mom">Assign</button></li> -->
-                            <a id="modal-mother" href="#modal-container-mother" role="button" class="btn btn-primary" data-toggle="modal">FIND</a>			
-                            <div class="modal fade" id="modal-container-mother" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                            <h4 class="modal-title" id="myModalLabel">SEARCH MOTHER</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <li>
-                                                <input class="form-control" type="text" name="txtsearch" id="txtsearch" onClick="search()">
-                                            </li>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <button type="button" class="btn btn-primary">Select</button>
-                                        </div>
-                                    </div>				
-                                </div>				
-                            </div>                        
-                        <li><label>Reg No. ::</label><input type="text" id="reg-no" name="reg-no" /></li>
+                        <li><h4><small>VACCINATION INFORMATION</small></h4></li>
+                        <li>
+                            <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
+                        </li>
                     </ul>
                     <hr>
                     <ul class="list-inline">
-                        <li><label>DOB :: </label><input type="date" name="dob" id="dob"></li>
-                        <li><label>EDD :: </label><input type="date" name="edd" id="edd"></li>
-                        <li><label>Maturity :: </label></li>
-                        <li><p>Calculate(EDD-DOB)</p></li>
-                    </ul> 
-                    <ul class="list-inline">
-                        <li><label>APGAR :: </label><input type="number" name="apgar" id="apgar"></li>
-                        <li><label>Weight@birth :: </label><input type="number" name="bweight" id="bweight"><label>g</label></li>
-                    </ul>
-                    <ul class="list-inline">
-                        <li><label>OFC@birth :: </label><input type="number" name="ofcc-birth" id="ofcc-birth"><label>cm</label></li>
-                        <li><label>Length@birth :: </label><input type="number" name="blenght" id="blength"><label>cm</label></li>
-                    </ul>
-                    <ul class="list-inline">
                         <li>
-                            <div id="view_feeding_list"></div>
-                            <label>Initiation of breast feeding :: </label>
-                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=breastfeed">SELECT</a>
+                            <label>Vaccination :: </label>
+                            <a href="../api/vaccines.jag?action=getvaccine&vacCate=all">SELECT</a>
                         </li>
                     </ul>
                     <ul class="list-inline">
+                        <li><label>Date :: </label><input type="date" size="10" name="vaccinedate" id="vaccinedate"></li>
+                    </ul>
+                    <hr>
+                    <ul class="list-inline">
+                        <li><h4><small>VACCINATION INFORMATION</small></h4></li>
                         <li>
-                            <label>Neonatal complications :: </label>
-                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=neonatcomplex">SELECT</a>
+                            <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            </div>
                         </li>
-                        <li><label>Other neonatal complications ::</label><input type="text" name="neonatal" id="neonatal"/></li>
                     </ul>
                 </div>
             </form>

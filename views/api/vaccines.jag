@@ -1,0 +1,20 @@
+<%
+
+include("../../model/dbinit.jag");
+include("../../model/disease.jag");
+include("../../controller/disease.jag");
+
+ var action = request.getParameter('action');
+ var optCategory = request.getParameter('disCate');
+ var optCategory = request.getParameter('disType');
+
+switch(action) {
+    case "getdisease":
+        log.info("API : getdisease EXEC : get "+vacCate);
+        print(getvaccine(disCate));
+        break;
+	default:
+		print(invokeError("API : getdisease RETURN : field_options action not defined"));
+}
+
+%>

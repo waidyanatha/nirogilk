@@ -1,0 +1,28 @@
+<%
+function getdisease(option){
+    log.info("CONTROLLER : dunction getdisease EXEC : get_disease_"+option+"()");
+    print(get_disease(option));
+
+}
+function get_disease(option) {
+	var db_qury = db_query_sel_disease(option);
+	log.info("CONTROLLER : disease-->get_disease("+option+") EXEC : "+db_qury);
+	var results = db.query(db_qury);
+	if(results != null ){
+	return {
+		"error" : false,
+		"results" : results
+	};
+	}else {
+		return invokeError("CONTROLLER : disease-->get_disease("+option+") RETURN : No field options");
+	}
+}
+function invokeError(msg) {
+	log.info(msg);
+	return {
+		"error" : true,
+		"errorMsg" : msg
+	};
+}
+
+%>

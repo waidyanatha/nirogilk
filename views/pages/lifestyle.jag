@@ -118,14 +118,60 @@
                         </li>
                     </ul>
                     <hr>
-                    <h4><small>EVER CONSUME (check box if YES)</small></h4>
+                    <h4><small>EVER CONSUME (check relevant box if YES)</small></h4>
+                    <label>Smoking status :: </label>
+                    <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=smokestatus">SELECT</a>
                     <ul class="list-inline">
-                        <li><label>Tobacco? </label><input type="checkbox" name="tobacco" id="tobacco" onclick="yesnoCheck('tobacco','litobacco')"></li>
-                        <li id="litobacco"><label>When :: </label><input type="date" size="10" name="tobaccodate" id="tobaccodate"></li>
+                        <li><label>Non-smoker? </label><input type="checkbox" name="nonsmoker" id="nonsmoker" onclick="yesnoCheck('nonsmoker','linonsmoker')" ></li>
+                        <li><label>Current smoker? </label><input type="checkbox" name="smoker" id="smoker" onclick="yesnoCheck('smoker','lismoker')"></li>
+                        <li><label>Ex-smoker? </label><input type="checkbox" name="exsmoker" id="exsmoker" onclick="yesnoCheck('exsmoker','liexsmoker')"></li>                        
+                        <li id="lismoker">
+                            <label>Started :: </label>
+                            <input type="date" size="10" name="smokerdate" id="smokerdate">
+                            <label>Type :: </label>
+                            <select name="smoketype" id="smoketype">
+                                <option name="cigarettes" id="cigarettes">Cigarettes</option>
+                                <option name="cigars" id="cigars">Cigars</option>
+                                <option name="beedee" id="beedee">Beedee</option>
+                                <option name="other" id="other">Other</option>
+                            </select>
+                            <label>Frequency :: </label>
+                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=smokefreq">SELECT</a>
+                            <label>Avg. per day</label><input type="number" min=1 max=99 size="2" name="avgperday" id="avgperday">
+                        </li>
+                        <li id="liexsmoker">
+                            <label>Began :: </label>
+                            <input type="date" size="10" name="exsmokerstdate" id="exsmokerstdate">
+                            <label>Stopped :: </label>
+                            <input type="date" size="10" name="exsmokerenddate" id="exsmokerenddate">
+                        </li>
                     </ul>
+                    <label>Alcoholic status :: </label>
+                    <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=alcostatus">SELECT</a>
                     <ul class="list-inline">
-                        <li><label>Alcohole? </label><input type="checkbox" name="alcohol" id="alcohol" onclick="yesnoCheck('alcohol','lialcohol')"></li>
-                        <li id="lialcohol"><label>When :: </label><input type="date" size="10" name="alcoholdate" id="alcoholdate"></li>
+                        <li><label>Non-alcoholic? </label><input type="checkbox" name="nonalco" id="nonalco" onclick="yesnoCheck('nonalco','linonalco')" ></li>
+                        <li><label>Current user? </label><input type="checkbox" name="alcohol" id="alcohol" onclick="yesnoCheck('alcohol','lialcohol')"></li>
+                        <li><label>Ex-alcoholic? </label><input type="checkbox" name="exalco" id="exalco" onclick="yesnoCheck('exalco','liexalco')"></li>                        
+                        <li id="linonalco">Continue ... (nothing to else)</label>
+                        </li>
+                        <li id="lialcohol">
+                            <label>Started :: </label>
+                            <input type="date" size="10" name="alcoholdate" id="alcoholdate">
+                            <label>Type :: </label>
+                            <select name="alcotype" id="alcotype">
+                                <option name="beer" id="beer">Beer</option>
+                                <option name="hardliquor" id="hardliquor">Hard liquor</option>
+                                <option name="illicitliquor" id="illicitliquor">Illicit liquor</option>
+                            </select>
+                            <label>Frequency :: </label>
+                            <a href="../api/fieldoptions.jag?action=getfieldoptions&optCategory=alcofreq">SELECT</a>
+                        </li>
+                        <li id="liexalco">
+                            <label>Began :: </label>
+                            <input type="date" size="10" name="exalcostdate" id="exalcostdate">
+                            <label>Stopped :: </label>
+                            <input type="date" size="10" name="exalcoenddate" id="exalcoenddate">
+                        </li>
                     </ul>
                     <ul class="list-inline">
                         <li><label>Narcotics? </label><input type="checkbox" name="narcotics" id="narcotics" onclick="yesnoCheck('narcotics','linarcotics')"></li>
